@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <script src="<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <script src="C:\Users\student\Desktop\php"></script>
+</head>
+<body>
+
+<div ng-controller="LoginController">
+    <h2>Login Form</h2>
+    <form ng-submit="login()">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" ng-model="user.username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" ng-model="user.password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    <div ng-show="errorMessage" style="color: red;">{{ errorMessage }}</div>
+</div>
+
+<script>
+    var app = angular.module('loginApp', []);
+    
+    app.controller('LoginController', function ($scope) {
+        $scope.user = {
+            username: '',
+            password: ''
+        };
+        
+        $scope.errorMessage = '';
+        
+        $scope.login = function () {
+            // You can add your login logic here, e.g., calling an API
+            // For demonstration purposes, let's check if username and password are both 'admin'
+            if ($scope.user.username === 'admin' && $scope.user.password === 'admin') {
+                alert('Login successful!');
+                // You can redirect the user to another page after successful login
+                // Example: $window.location.href = '/dashboard';
+            } else {
+                $scope.errorMessage = 'Invalid username or password.';
+            }
+        };
+    });
+</script>
+
+</body>
+</html>"></script>
+</head>
+<body>
+
+<div ng-controller="LoginController">
+    <h2>Login Form</h2>
+    <form ng-submit="login()">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" ng-model="user.username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" ng-model="user.password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    <div ng-show="errorMessage" style="color: red;">{{ errorMessage }}</div>
+</div>
+
+<script>
+    var app = angular.module('loginApp', []);
+    
+    app.controller('LoginController', function ($scope) {
+        $scope.user = {
+            username: '',
+            password: ''
+        };
+        
+        $scope.errorMessage = '';
+        
+        $scope.login = function () {
+            // You can add your login logic here, e.g., calling an API
+            // For demonstration purposes, let's check if username and password are both 'admin'
+            if ($scope.user.username === 'admin' && $scope.user.password === 'admin') {
+                alert('Login successful!');
+                // You can redirect the user to another page after successful login
+                // Example: $window.location.href = '/dashboard';
+            } else {
+                $scope.errorMessage = 'Invalid username or password.';
+            }
+        };
+    });
+</script>
+
+</body>
+</html>
